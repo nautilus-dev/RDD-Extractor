@@ -4,11 +4,11 @@ This project is an extractor of RDD (RDF Data Description) from RDF datasets.
 For more information about RDD visit: http://dbis.informatik.uni-freiburg.de/forschung/projekte/rdd/
 There you also find the SP2bench tool to generate rdf datasets to use with the RDD-Extractor
 
-## Preconditions
+## Prerequisites
 This is tested with java 8 targeting compatibility with java 7.
 
 ## Usage
-For standalone usage run
+For standalone downlaod the `RDD-Extractor-0.0.2.jar` in the `target` folder and run
 `java -jar RDD-extractor-0.0.2.jar`
 
 Commandline arguments are displayed when invoked without them:
