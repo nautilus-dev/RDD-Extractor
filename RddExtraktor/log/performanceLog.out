@@ -1,0 +1,126 @@
+	Time (ms): 125 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT DISTINCT ?name WHERE { ?node rdf:type ?name. }
+
+	Time (ms): 31 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> 
+ SELECT DISTINCT ?name WHERE { ?node rdf:type httpwwwexamplecom:Student. ?node ?name ?name2. FILTER (?name != rdf:type) }
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> 
+ SELECT DISTINCT ?name WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. ?node ?name ?name2. FILTER (?name != rdf:type) }
+
+	Time (ms): 16 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpwwwexamplecom:Student. OPTIONAL {?node httpwwwexamplecom:taughtBy ?name.}} GROUP BY ?node ORDER BY ASC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpwwwexamplecom:Student. ?node httpwwwexamplecom:taughtBy ?name.} GROUP BY ?node ORDER BY DESC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?name1 WHERE { ?node rdf:type httpwwwexamplecom:Student. ?node httpwwwexamplecom:taughtBy ?name. ?name rdf:type ?name1.} GROUP BY ?name1 LIMIT 2
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpwwwexamplecom:Student. ?node httpwwwexamplecom:taughtBy ?name. FILTER (!isBlank(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpwwwexamplecom:Student. ?node httpwwwexamplecom:taughtBy ?name. FILTER (!isLiteral(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpwwwexamplecom:Student. OPTIONAL {?node httpxmlnscomfoaf01:knows ?name.}} GROUP BY ?node ORDER BY ASC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpwwwexamplecom:Student. ?node httpxmlnscomfoaf01:knows ?name.} GROUP BY ?node ORDER BY DESC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?name1 WHERE { ?node rdf:type httpwwwexamplecom:Student. ?node httpxmlnscomfoaf01:knows ?name. ?name rdf:type ?name1.} GROUP BY ?name1 LIMIT 2
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpwwwexamplecom:Student. ?node httpxmlnscomfoaf01:knows ?name. FILTER (!isBlank(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpwwwexamplecom:Student. ?node httpxmlnscomfoaf01:knows ?name. FILTER (!isLiteral(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpwwwexamplecom:Student. OPTIONAL {?node httpwwwexamplecom:matricNr ?name.}} GROUP BY ?node ORDER BY ASC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpwwwexamplecom:Student. ?node httpwwwexamplecom:matricNr ?name.} GROUP BY ?node ORDER BY DESC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpwwwexamplecom:Student. ?node httpwwwexamplecom:matricNr ?name. FILTER (!isIRI(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpwwwexamplecom:Student. ?node httpwwwexamplecom:matricNr ?name. FILTER (!isBlank(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpwwwexamplecom:Student. OPTIONAL {?node httpwwww3org200001rdf-schema:label ?name.}} GROUP BY ?node ORDER BY ASC(?count) LIMIT 1
+
+	Time (ms): 16 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpwwwexamplecom:Student. ?node httpwwww3org200001rdf-schema:label ?name.} GROUP BY ?node ORDER BY DESC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpwwwexamplecom:Student. ?node httpwwww3org200001rdf-schema:label ?name. FILTER (!isIRI(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpwwwexamplecom:Student. ?node httpwwww3org200001rdf-schema:label ?name. FILTER (!isBlank(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. OPTIONAL {?node httpxmlnscomfoaf01:knows ?name.}} GROUP BY ?node ORDER BY ASC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. ?node httpxmlnscomfoaf01:knows ?name.} GROUP BY ?node ORDER BY DESC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?name1 WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. ?node httpxmlnscomfoaf01:knows ?name. ?name rdf:type ?name1.} GROUP BY ?name1 LIMIT 2
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. ?node httpxmlnscomfoaf01:knows ?name. FILTER (!isBlank(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. ?node httpxmlnscomfoaf01:knows ?name. FILTER (!isLiteral(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. OPTIONAL {?node httpxmlnscomfoaf01:age ?name.}} GROUP BY ?node ORDER BY ASC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. ?node httpxmlnscomfoaf01:age ?name.} GROUP BY ?node ORDER BY DESC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. ?node httpxmlnscomfoaf01:age ?name. FILTER (!isIRI(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. ?node httpxmlnscomfoaf01:age ?name. FILTER (!isBlank(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. OPTIONAL {?node httpxmlnscomfoaf01:email ?name.}} GROUP BY ?node ORDER BY ASC(?count) LIMIT 1
+
+	Time (ms): 15 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. ?node httpxmlnscomfoaf01:email ?name.} GROUP BY ?node ORDER BY DESC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. ?node httpxmlnscomfoaf01:email ?name. FILTER (!isIRI(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. ?node httpxmlnscomfoaf01:email ?name. FILTER (!isBlank(?name)) } LIMIT 1
+
+	Time (ms): 16 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. OPTIONAL {?node httpwwww3org200001rdf-schema:label ?name.}} GROUP BY ?node ORDER BY ASC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. ?node httpwwww3org200001rdf-schema:label ?name.} GROUP BY ?node ORDER BY DESC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. ?node httpwwww3org200001rdf-schema:label ?name. FILTER (!isIRI(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE { ?node rdf:type httpxmlnscomfoaf01:Person. ?node httpwwww3org200001rdf-schema:label ?name. FILTER (!isBlank(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE {?node ?name ?name2. FILTER (?name != rdf:type) }
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE {?node httpxmlnscomfoaf01:knows ?name.} GROUP BY ?node ORDER BY ASC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE {?node httpxmlnscomfoaf01:knows ?name.} GROUP BY ?node ORDER BY DESC(?count) LIMIT 1
+
+	Time (ms): 15 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?name WHERE { ?node httpxmlnscomfoaf01:knows ?name. ?node2 httpxmlnscomfoaf01:knows ?name. FILTER (?node != ?node2)} LIMIT 2
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?name1 WHERE {?node httpxmlnscomfoaf01:knows ?name. ?name rdf:type ?name1.} GROUP BY ?name1 LIMIT 2
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE {?node httpxmlnscomfoaf01:knows ?name. FILTER (!isBlank(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE {?node httpxmlnscomfoaf01:knows ?name. FILTER (!isLiteral(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?node WHERE {?node ?prop1 ?name1 MINUS {?node httpxmlnscomfoaf01:age ?name.}} LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE {?node httpxmlnscomfoaf01:age ?name. FILTER (!isIRI(?name)) } LIMIT 1
+
+	Time (ms): 16 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE {?node httpxmlnscomfoaf01:age ?name. FILTER (!isBlank(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?node WHERE {?node ?prop1 ?name1 MINUS {?node httpxmlnscomfoaf01:email ?name.}} LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE {?node httpxmlnscomfoaf01:email ?name. FILTER (!isIRI(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE {?node httpxmlnscomfoaf01:email ?name. FILTER (!isBlank(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE {?node httpwwww3org200001rdf-schema:label ?name.} GROUP BY ?node ORDER BY ASC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT (COUNT(?name) as ?count) WHERE {?node httpwwww3org200001rdf-schema:label ?name.} GROUP BY ?node ORDER BY DESC(?count) LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE {?node httpwwww3org200001rdf-schema:label ?name. FILTER (!isIRI(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE {?node httpwwww3org200001rdf-schema:label ?name. FILTER (!isBlank(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?node WHERE {?node ?prop1 ?name1 MINUS {?node httpwwwexamplecom:taughtBy ?name.}} LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?name1 WHERE {?node httpwwwexamplecom:taughtBy ?name. ?name rdf:type ?name1.} GROUP BY ?name1 LIMIT 2
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE {?node httpwwwexamplecom:taughtBy ?name. FILTER (!isBlank(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE {?node httpwwwexamplecom:taughtBy ?name. FILTER (!isLiteral(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?node WHERE {?node ?prop1 ?name1 MINUS {?node httpwwwexamplecom:matricNr ?name.}} LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE {?node httpwwwexamplecom:matricNr ?name. FILTER (!isIRI(?name)) } LIMIT 1
+
+	Time (ms): 0 for Statement: PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX httpwwwexamplecom: <http://www.example.com#> PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/> PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?name WHERE {?node httpwwwexamplecom:matricNr ?name. FILTER (!isBlank(?name)) } LIMIT 1
+

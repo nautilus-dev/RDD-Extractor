@@ -1,0 +1,14 @@
+RDD-Extractor
+Copyright 2015 Philip Schledermann
+
+Third party libraries
+---------------------
+This product includes the following libraries:
+
+Apache Jena *
+Apache Commons Cli *
+Apache Log4j2 *
+
+* software developed by The Apache Software Foundation (http://www.apache.org/), 
+   published under Apache 2.0 license (http://www.apache.org/licenses/LICENSE-2.0)
+
