@@ -9,7 +9,7 @@ This is tested with java 8 targeting compatibility with java 7.
 
 ## Usage
 For standalone usage run
-java -jar RDD-extractor-0.0.2.jar
+`java -jar RDD-extractor-0.0.2.jar`
 
 Commandline arguments are displayed when invoked without them:
 ```
@@ -30,8 +30,8 @@ Commandline arguments are displayed when invoked without them:
 o and w Properties are mandatory.
           
 For a standalone test you can use the preconfigured and bundeled configurations:
-java -jar RDD-extractor-0.0.2.jar -i SIMPLE_example.n3 -o output.rdd -w OWA
+`java -jar RDD-extractor-0.0.2.jar -i SIMPLE_example.n3 -o output.rdd -w OWA`
  
 ## Building
 This is a maven project, you can clean/build/package/test the application with:
-mvn clean package exec:exec
+`mvn clean package exec:exec`
