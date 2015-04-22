@@ -31,6 +31,6 @@ o and w Properties are mandatory.
 For a standalone test you can use the preconfigured and bundeled configurations:
 java -jar RDD-extractor-0.0.2.jar -i SIMPLE_example.n3 -o output.rdd -w OWA
  
-# Building
+## Building
 This is a maven project, you can clean/build/package/test the application with:
 mvn clean package exec:exec
