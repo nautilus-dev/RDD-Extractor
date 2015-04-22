@@ -67,7 +67,7 @@ public class RddExtractor {
 			System.err.println("Command line parsing failed. Reason: "+e.getMessage());
 			return;
 		}
-		
+	
 		String INPUT_FILE = cmd.getOptionValue("i"); 
 		String OUTPUT_FILE = cmd.getOptionValue("o");
 		String ENDPOINTURL = cmd.getOptionValue("e");
@@ -79,7 +79,6 @@ public class RddExtractor {
 		} else if (cmd.hasOption("l")) {
 			propertyFile = cmd.getOptionValue("l");
 		}
-		
 //		String propertyFile = (cmd.hasOption("l")) ? cmd.getOptionValue("l") : "src/main/resources/log4j.properties2";
 				
 		PropertyConfigurator.configure(propertyFile);

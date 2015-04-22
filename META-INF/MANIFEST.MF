@@ -30,4 +30,6 @@ Bundle-ClassPath: GeneratorFromEndpoint.jar,
  jena-libs/jena-jdbc-driver-bundle-1.1.1.jar
 Export-Package: edu.freiburg.dbis.rdd,
  edu.freiburg.dbis.rdd.Tools
-Require-Bundle: GeneratorFromEndpoint
+Require-Bundle: GeneratorFromEndpoint,
+ org.apache.commons.cli
+Import-Package: org.apache.log4j

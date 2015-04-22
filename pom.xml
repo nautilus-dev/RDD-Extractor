@@ -19,12 +19,12 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.uni-freiburg.informatik.dbis</groupId>
   <artifactId>RDD-extractor</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2</version>
   <name>RDD extractor</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <main.class>edu.freiburg.dbis.rdd.RddExtractor</main.class>
-      <input.file>src/main/resources/SIMPLE_example.n3</input.file>
+      <input.file>SIMPLE_example.n3</input.file>
       <output.file>output.rdd</output.file>
       <wa.choice>OWA</wa.choice>
   </properties>
@@ -52,6 +52,8 @@
 	<plugin>
 	  <artifactId>maven-assembly-plugin</artifactId>
 	  <configuration>
+	  	  <!--  used for creating a single jar only. comment out to get the fat and the slim jar -->
+	      <appendAssemblyId>false</appendAssemblyId>
 	    <archive>
 	      <manifest>
 	        <mainClass>${main.class}</mainClass>
