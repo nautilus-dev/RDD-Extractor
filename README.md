@@ -12,6 +12,7 @@ For standalone usage run
 java -jar RDD-extractor-0.0.2.jar
 
 Commandline arguments are displayed when invoked without them:
+```
  -e,--sparql-enpoint <arg>     URL of the sparql enpoint that should be
                                queried
  -g,--graph-name <arg>         Name of the Graph that should be queried
@@ -25,7 +26,7 @@ Commandline arguments are displayed when invoked without them:
  -v,--verbose                  use verbose mode
  -w,--WA <arg>                 Modeling a subset (OWA) or the full dataset
                                (CWA)
-                               
+```                               
 o and w Properties are mandatory.
           
 For a standalone test you can use the preconfigured and bundeled configurations:
