@@ -1,0 +1,17 @@
+@prefix ex: <http://www.example.com#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dbis: <http://www.dbis.informatik.uni-freiburg.de/team/>.
+@prefix student: <http://www.uni-freiburg.de/student/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+dbis:Bob_Example rdf:type foaf:Person.
+dbis:Bob_Example rdfs:label "Max Mustermann"^^xsd:string.
+dbis:Bob_Example foaf:email "mustermax@informatik.uni-freiburg.de"^^xsd:string.
+dbis:Bob_Example foaf:age "35"^^xsd:integer.
+dbis:Bob_Example foaf:knows dbis:Bob_Example.
+student:Alice_Sample rdf:type ex:Student.
+student:Alice_Sample rdfs:label "Hans Musterstudent"^^xsd:string.
+student:Alice_Sample ex:matricNr "1234567890"^^xsd:interger.
+student:Alice_Sample foaf:knows dbis:Bob_Example.
+student:Alice_Sample ex:taughtBy dbis:Bob_Example.

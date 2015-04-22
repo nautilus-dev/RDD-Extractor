@@ -1,0 +1,2 @@
+[0.0.2] changed defaults (logging and testing) to bundeled resources. - Added usage description to readme - change pom to only generate a single (fat) jar.
+[0.0.1-Snapshot] very first commit
