@@ -1,0 +1,12 @@
+edu\freiburg\dbis\rdd\CLAZZ.class
+edu\freiburg\dbis\rdd\Tools\Prefixer.class
+edu\freiburg\dbis\rdd\RddExtractor.class
+edu\freiburg\dbis\rdd\PrefixedIRI.class
+edu\freiburg\dbis\rdd\Backend.class
+edu\freiburg\dbis\rdd\Tools\Properties.class
+edu\freiburg\dbis\rdd\Props.class
+edu\freiburg\dbis\rdd\Tools\Prefix.class
+edu\freiburg\dbis\rdd\DBConnector.class
+edu\freiburg\dbis\rdd\Tools\RDDWriter.class
+edu\freiburg\dbis\rdd\Tools\PrefixReader.class
+edu\freiburg\dbis\rdd\Tools\rdfType.class

@@ -1,0 +1,24 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX httpwwwexamplecom: <http://www.example.com#>
+PREFIX httpxmlnscomfoaf01: <http://xmlns.com/foaf/0.1/>
+PREFIX httpwwww3org200001rdf-schema: <http://www.w3.org/2000/01/rdf-schema#>
+
+OWA CLASSES {
+	OWA CLASS httpwwwexamplecom:Student {
+		KEY, RANGE(httpxmlnscomfoaf01:Person) httpwwwexamplecom:taughtBy : IRI;
+		KEY, RANGE(httpxmlnscomfoaf01:Person) httpxmlnscomfoaf01:knows : IRI;
+		KEY httpwwwexamplecom:matricNr : LITERAL;
+		KEY httpwwww3org200001rdf-schema:label : LITERAL;
+	}
+	OWA CLASS httpxmlnscomfoaf01:Person {
+		KEY, RANGE(httpxmlnscomfoaf01:Person) httpxmlnscomfoaf01:knows : IRI;
+		KEY httpxmlnscomfoaf01:age : LITERAL;
+		KEY httpxmlnscomfoaf01:email : LITERAL;
+		KEY httpwwww3org200001rdf-schema:label : LITERAL;
+	}
+}
+
+OWA PROPERTIES {
+	TOTAL, RANGE(httpxmlnscomfoaf01:Person) httpxmlnscomfoaf01:knows : IRI;
+	KEY httpwwww3org200001rdf-schema:label : LITERAL;
+}
