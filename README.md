@@ -4,10 +4,10 @@ This project is an extractor of RDD (RDF Data Description) from RDF datasets.
 For more information about RDD visit: http://dbis.informatik.uni-freiburg.de/forschung/projekte/rdd/
 There you also find the SP2bench tool to generate rdf datasets to use with the RDD-Extractor
 
-# PRECONDITIONS
+## Preconditions
 This is tested with java 8 targeting compatibility with java 7.
 
-# USAGE
+## Usage
 For standalone usage run
 java -jar RDD-extractor-0.0.2.jar
 
@@ -31,6 +31,6 @@ o and w Properties are mandatory.
 For a standalone test you can use the preconfigured and bundeled configurations:
 java -jar RDD-extractor-0.0.2.jar -i SIMPLE_example.n3 -o output.rdd -w OWA
  
-# BUILDING
-This is a maven project, you can build/package/test the application with:
+# Building
+This is a maven project, you can clean/build/package/test the application with:
 mvn clean package exec:exec
